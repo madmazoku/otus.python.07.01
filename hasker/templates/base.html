@@ -1,7 +1,19 @@
 <!-- templates/base.html -->
-<header>
-  <a href="{% url 'home' %}">Home</a> | <a href="{% url 'about' %}">About</a>
-</header>
-
+<body>
+{% load staticfiles %}
+<table width="100%">
+    <tr>
+        <td width="100"><img src="{% static "logo.jpg" %}" width="100"</td>
+        <td bgcolor="#f0ffff" valign="top">search / {% static "logo.jpg" %}</td>
+        <td bgcolor="#fff0ff" valign="top" width="25%">login/signup</td>
+    </tr>
+    <tr>
+        <td colspan="2" bgcolor="#fffff0" valign="top">
 {% block content %}
 {% endblock %}
+        </td>
+        <td bgcolor="#f0fff0">user</td>
+    </tr>
+</table>
+
+</body>
